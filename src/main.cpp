@@ -15,7 +15,7 @@ usage(char* program)
 	puts  ("-A\t Don't show address offsets.");
 	puts  ("-a\t Show address offsets.");
 	puts  ("-P\t Don't print readable ASCII characters.");
-	puts  ("-H\t Only print hexadecimal values.\n  \t This is a combination of -A and -C switches.");
+	puts  ("-H\t Only print hexadecimal values.\n  \t This is a combination of -A and -P switches.");
 	puts  ("-h\t Help messages.");
 }
 
