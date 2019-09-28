@@ -1,6 +1,6 @@
 CC=g++
 FLAGS=-Wall -O3
-LIBS=-lncurses
+LIBS=
 BIN=tentomon
 
 all:
