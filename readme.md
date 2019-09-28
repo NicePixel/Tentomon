@@ -1,5 +1,7 @@
 # Tentomon - hexadecimal viewer
 
+![Image of software running](./datarepo/usage.png)
+
 ## Description
 
 A simple software for printing hexadecimal values of the given file.
