@@ -87,7 +87,7 @@ main(int argc, char** argv)
 		{
 			std::cout << std::setfill('0') << std::setw(8) << std::hex << offset << ' ';
 			offset += 16;
-		std::cout << ' ';
+			std::cout << ' ';
 		}
 		/* Hexadecimal values */
 		for (int i = 0; i < 16; i++)
