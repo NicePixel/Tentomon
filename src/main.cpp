@@ -10,13 +10,13 @@ static int option_ascii = 1;
 static void
 usage(char* program)
 {
-	printf("Usage: %s [OPTIONS] FILE\n", program);
-	puts  ("Options:");
-	puts  ("-A\t Don't show address offsets.");
-	puts  ("-a\t Show address offsets.");
-	puts  ("-P\t Don't print readable ASCII characters.");
-	puts  ("-H\t Only print hexadecimal values.\n  \t This is a combination of -A and -P switches.");
-	puts  ("-h\t Help messages.");
+	std::cout << "Usage: << " << program << "[OPTIONS] FILE" << std::endl;
+	std::cout << "Options:" << std::endl;
+	std::cout << "-A\t Don't show address offsets." << std::endl;
+	std::cout << "-a\t Show address offsets." << std::endl;
+	std::cout << "-P\t Don't print readable ASCII characters." << std::endl;
+	std::cout << "-H\t Only print hexadecimal values.\n  \t This is a combination of -A and -P switches." << std::endl;
+	std::cout << "-h\t Help messages." << std::endl;
 }
 
 static int
