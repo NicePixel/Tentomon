@@ -47,6 +47,7 @@ parseargs(int argc, char** argv)
 	if (optind >= argc)
 	{
 		std::cerr << "File was not given." << std::endl;
+		usage(argv[0]);
 		return 1;
 	}
 	filepath = argv[optind];
