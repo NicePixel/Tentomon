@@ -127,7 +127,7 @@ main(int argc, char** argv)
 				}
 				else
 				{
-					std::cout << ' ';
+					break;
 				}
 			}
 			std::cout << "|";
