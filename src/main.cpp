@@ -3,6 +3,8 @@
 #include <iomanip>
 #include <getopt.h>
 
+static const int BUFFER_SIZE = 16;
+
 static std::string filepath;
 static int option_addressoffset = 1;
 static int option_ascii = 1;
@@ -58,7 +60,7 @@ int
 main(int argc, char** argv)
 {
 	std::ifstream file;
-	unsigned char buffer[16];
+	unsigned char buffer[BUFFER_SIZE];
 	long int readcount;
 	int offset;
 
@@ -77,7 +79,7 @@ main(int argc, char** argv)
 	offset = 0;
 	for(;;)
 	{
-		file.read((char*) buffer, 16);
+		file.read((char*) buffer, BUFFER_SIZE);
 		readcount = file.gcount();
 		if (readcount <= 0)
 		{
@@ -87,11 +89,11 @@ main(int argc, char** argv)
 		if (option_addressoffset)
 		{
 			std::cout << std::setfill('0') << std::setw(8) << std::hex << offset << ' ';
-			offset += 16;
+			offset += BUFFER_SIZE;
 			std::cout << ' ';
 		}
 		/* Hexadecimal values */
-		for (int i = 0; i < 16; i++)
+		for (int i = 0; i < BUFFER_SIZE; i++)
 		{
 			if (i == 8)
 			{
@@ -110,7 +112,7 @@ main(int argc, char** argv)
 		if (option_ascii)
 		{
 			std::cout << " |";
-			for (int i = 0; i < 16; i++)
+			for (int i = 0; i < BUFFER_SIZE; i++)
 			{
 				char c;
 				if (i < readcount)
